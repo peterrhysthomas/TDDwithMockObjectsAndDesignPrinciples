@@ -21,6 +21,13 @@ public class AlarmTests {
 	}
 	
 	@Test
+	public void characteristicTestForExistingBehaviour() {
+		// Basic characteristic test to check for compilation errors of current behaviour
+		// For more details see https://en.wikipedia.org/wiki/Characterization_test
+		alarm = new Alarm();
+	}
+	
+	@Test
 	public void alarmIsTriggeredBySensorReadingBelowLowPressureValue() {
 		stubSensor.pushPsiValue(LOW_PRESSURE);
 		alarm.check();
